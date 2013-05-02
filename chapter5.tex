@@ -1,7 +1,7 @@
-\chapter{Computational experiments and results}
+\section{Computational experiments and results}
 \label{chap:census}
 
-\section{A census of prime spaces induced by small g-blinks}
+\subsection{A census of prime spaces induced by small g-blinks}
 \label{sec:census}
 
 \newcommand{\kpu}{\,$k$-prime-unavoidable }
@@ -17,20 +17,20 @@ $\,\,\leq k \,\,$ edges are there. Even though, for any fixed $k \geq
 even smaller set and not lose any space. This may be done if we
 believe in the following reasonable conjecture.
 
-\begin{Conj} \label{conj:noCompositeHasFewerEdgesThanItsMinimalPrimeSum}
+\begin{conjecture} \label{conj:noCompositeHasFewerEdgesThanItsMinimalPrimeSum}
 Let a space $S$ be the connected sum of prime spaces $A$ and $B$.
 If the minimal blink presentations for $A$ and $B$ have respectively $n_A$ and
 $n_B$ edges, then $n_S$, the number of edges for the minimal blink presentation
 of $S$, satisfies  $n_S = n_A + n_B$.
-\end{Conj}
+\end{conjecture}
 
-A {\it minimal blink for a space} is a blink that
+A {\em minimal blink for a space} is a blink that
 has the same number of edges or fewer edges than any other blink
-presentation for that space. A {\it prime space} is one that cannot
+presentation for that space. A {\em prime space} is one that cannot
 be expressed by a connected sum of two or more spaces
-different from $\IS^3$. A {\it composite space} is a space
-that is not prime, \ie one space that can be expressed by a connected sum of
-two or more spaces different from $\IS^3$. A blink presentation for any composite space
+different from $\mathbb{S}^3$. A {\em composite space} is a space
+that is not prime, i.e. one space that can be expressed by a connected sum of
+two or more spaces different from $\mathbb{S}^3$. A blink presentation for any composite space
 is obtained by drawing the blinks of each of its prime pieces
 separately in the same drawing: a red-green plane graph with more than one
 connected component. This construction clearly defines an upper bound for
@@ -45,13 +45,13 @@ possibility that remains to the conjecture to be false is
 a blink presentation with less than $n$ components. On the other
 hand we have,
 
-\begin{Prop} \label{prop:primeIsSufficient}
+\begin{proposition} \label{prop:primeIsSufficient}
 If Conjecture~\ref{conj:noCompositeHasFewerEdgesThanItsMinimalPrimeSum} is true
 then, knowing one minimal blink for each prime space that has a blink presentation
 with $\leq k$ edges, it is possible to exhibit a minimal blink
 for all spaces (composite or prime) that have a blink presentation with
 $\leq k$ edges.
-\end{Prop}
+\end{proposition}
 \begin{proof}
 If $S$ is a prime space that has a blink with fewer than $k$ edges then,
 by hypothesis, we already know one minimal blink for it. If $S$ is composite,
@@ -79,19 +79,19 @@ So, any set of blinks $B$ that induces spaces $S$ may be easily
 extended to a set of blinks $B'$ that induces $S$ and also the
 changed orientation version of the spaces in $S$. The set $B'$ is
 just $B$ plus the blinks of $B$ with the red-green edges swapped.
-This leads us to the following definition: a {\it set of blinks} is
-said to be {\it \kpu} if every space with a blink presentation with
+This leads us to the following definition: a {\em set of blinks} is
+said to be {\em \kpu} if every space with a blink presentation with
 $\,\,\leq k \,\,$ edges is induced by some blink in this set or a
 red-green swapped version of some blink in this set. These notions
-are analogously extended to g-blinks. A {\it set of g-blinks} is
-said to be {\it \kpu} if every space with a g-blink presentation with
+are analogously extended to g-blinks. A {\em set of g-blinks} is
+said to be {\em \kpu} if every space with a g-blink presentation with
 $\,\,\leq k \,\,$ g-edges is induced by some g-blink in this set or
 a red-green g-edges swapped version of some g-blink in this set.
 
 \newpage
 
 What we mean concretely by the title of this section:
-{\it a census of prime spaces induced by
+{\em a census of prime spaces induced by
 g-blinks} is a triple \vspace{-0.3cm}$$(k,{\cal B},f:{\cal B}
 \rightarrow \{1, \ldots, n\}),\vspace{-0.3cm}$$ where $k$ is a
 positive integer, ${\cal B}$ is a \kpu set of g-blinks and $f$ is a
@@ -102,12 +102,11 @@ swapped orientations then $f(B_1) = f(B_2)$, else
 $f(B_1) \neq f(B_2)$. Note that $f$ defines a partition of ${\cal B}$
 into $n$ classes where the g-blinks in each class induce the same space
 modulo orientation. For this reason we call $f$ the
-{\it partition function} of the census. In view of this definition of a
+{\em partition function} of the census. In view of this definition of a
 census of prime spaces, the steps to build one are: (1) define $k$;
 (2) define a \kpu set of g-blinks; (3) define the partition function $f$.
 
-\newpage
-\section{A prime-unavoidable set of g-blinks: $U$}
+\subsection{A prime-unavoidable set of g-blinks: $U$}
 
 To obtain a census of prime spaces induced by g-blinks with $\,\,\leq
 k \,\,$ edges, a set of \kpu g-blinks is needed. Before defining the
@@ -142,8 +141,8 @@ plane graph. By convention we see all these plane graphs as
 green-edged blinks. The blocks, besides the single-edged one, are
 obtained from the plane graph with two parallel green edges shown on
 Figure~\ref{fig:blockGeneration}A by applying inductively
-and in all possible ways {\it vertex subdivisions} and
-{\it face subdivisions}. An example of vertex subdivision may be seen on
+and in all possible ways {\em vertex subdivisions} and
+{\em face subdivisions}. An example of vertex subdivision may be seen on
 Figure~\ref{fig:blockGeneration}B. Any two distinct angles on a
 vertex are a base for this operation.  An example of face
 subdivision may be seen on Figure~\ref{fig:blockGeneration}C.
@@ -168,7 +167,7 @@ of edges or g-edges, and the resulting blocks from the \textsc{BlockGeneration}
 procedure. Here we see this input as green g-blinks and apply the
 following algorithm. Let $B$ the set with these
 input g-blinks or blocks. Make $A_1 = B$. For $i$ from 2 to $k$ make
-$A_i$ the result of {\it combining} every g-blink at $A_{i-1}$ with each
+$A_i$ the result of {\em combining} every g-blink at $A_{i-1}$ with each
 g-blink in $B$. Combining a g-blink $G$ with $n_G$ g-zigzags to a
 g-blink $G'$ with $n_{G'}$ g-zigzags results in $n_G \times n_{G'}$
 g-blinks. This is the result of merging $G$ and $G'$ on
@@ -230,7 +229,7 @@ Figure~\ref{fig:unecessaryGBlinkStructure}B. All of them induce the
 same space, and the right pattern has fewer crossings.
 
 \item If $G$ contains the pattern on
-Figure~\ref{fig:unecessaryGBlinkStructure}C then it has a {\it
+Figure~\ref{fig:unecessaryGBlinkStructure}C then it has a {\em
 circumcised component} and may be simplified by moves in the BFL
 calculus to a g-blink with fewer crossings as it is explained on
 pages 138--140 of \cite{KauffmanAndLins1994}. So, it may be discarded.
@@ -249,7 +248,7 @@ If g-blink $G$ passes all tests then one last transformation is done.
 The g-blink included in the result set of this step is
 actually $\min\{r(G), r(-G)\}$: the smallest g-blink
 between the representative of $G$ or the representative of $-G$
-\,\,(\ie g-blink $G$ with all crossings changed (C) or, equivalently
+\,\,(i.e. g-blink $G$ with all crossings changed (C) or, equivalently
 all g-edge colors swapped). This resulting g-blink is asserted to
 induce the same space as $G$ or its changed orientation version. Observe
 that the g-blinks resulting from this step are all representatives.  For $k=4$,
@@ -261,23 +260,28 @@ g-blinks resulting from the \textsc{Coloring} step. Let $B$ be this
 input set and $R = \{\}$, initially empty, be the result set.
 The filtering algorithm flows like this:
 
-{\setstretch{1.25}
+
 \begin{center}
-\hbox{
-\parbox{15cm}{
-\begin{small}
-\begin{algorithmic}[1]
- \While{$B$ \, is not empty}
-    \State $G \leftarrow$ an element of $B$
-    \State $RM3 \leftarrow$ closure of $G$ by Reidemeiter III Move
-    \If{no element of $RM3$ may be discarded by rules 2 to 6 of the \textsc{Coloring} step}
-       \State $R \leftarrow R \cup \{G\}$
-    \EndIf
-    \State $B \leftarrow B \backslash RM3$
- \EndWhile
-\end{algorithmic}
-\end{small}}}\end{center}
-}
+ ALGORITMO
+\end{center}
+
+% {\setstretch{1.25}
+% \begin{center}
+% \hbox{
+% \parbox{15cm}{
+% \begin{small}
+% \begin{algorithmic}[1]
+%  \While{$B$ \, is not empty}
+%     \State $G \leftarrow$ an element of $B$
+%     \State $RM3 \leftarrow$ closure of $G$ by Reidemeiter III Move
+%     \If{no element of $RM3$ may be discarded by rules 2 to 6 of the \textsc{Coloring} step}
+%        \State $R \leftarrow R \cup \{G\}$
+%     \EndIf
+%     \State $B \leftarrow B \backslash RM3$
+%  \EndWhile
+% \end{algorithmic}
+% \end{small}}}\end{center}
+% }
 The idea of this step is to use the Reidemeister III move, that preserves
 the number of crossings and the space, to find some blink version of the
 space that may be simplified by the rules 2 to 6 explained on the
@@ -302,7 +306,7 @@ the first two ingredients to a census of prime spaces up to 9 g-edges:
 $(9, U, ?)$. The only missing part is the third ingredient of a census:
 the partition function. This is the subject of next section.
 
-\section{Topological classification of g-blinks in $U$}
+\subsection{Topological classification of g-blinks in $U$}
 \label{sec:topologicalClassificationOfU}
 
 The set $U$ is a \npu{9} set of g-blinks. The next step to define
@@ -400,76 +404,76 @@ same space as it does. This fact enables us to change
 our question in g-blink language into a question in 3-gem language. The
 idea is to take, for each of the 501 HGnQI classes, all g-blinks
 in the same HGnQI class, calculate a 3-gem version for it
-and then try to find a proof that they are the same space, \ie
+and then try to find a proof that they are the same space, i.e.
 a path of ``moves'' in 3-gems that preserve the induced space
 connecting all these 3-gems.
 
-\newcommand{\GemOfGBlink}{
-\parbox{7.5cm}{
-\begin{footnotesize}
-\setstretch{1.25}
-\begin{algorithmic}[1]
-   \Function{GemOfGBlink}{$G$}
-   \State $J \leftarrow \textsc{GBlink2Gem}(G)$
-   \While{true}
-      \State $\textsc{SimplifyGem}(J)$
-      \State $\textsc{SearchInTSClass}(J,12\, {\rm seconds})$
-      \If{$J$ has no dipole, no $\rho_2$-pair and no $\rho_3$-pair}
-         \State break
-      \EndIf
-   \EndWhile
-   \State {\bf return} \,\, $J$
-   \EndFunction
-\end{algorithmic}
-\end{footnotesize}
-}}
-
-\newcommand{\SearchInTSClass}{
-\parbox{7.5cm}{
-\begin{footnotesize}
-\setstretch{1.25}
-\begin{algorithmic}[1]
-   \Procedure{SearchInTSClass}{$J, maxtime$}
-      \State $C \gets \{ J \}$ \,\, $U \gets \{ J \}$ \Comment{$C$ is the current TS-class of $J$ and $U$ are the unprocessed gems}
-      \While{$U$ is not empty and elapsed time < $maxtime$}
-         \State $J' \leftarrow$ a gem in $U$
-         \State $U \leftarrow U \backslash \{J'\}$
-         \For{all possible TS-moves $m$ in $J'$ }
-            \State $J'' \leftarrow J'$ with TS-move $m$ applied
-            \If{$J'' \notin C$}
-                \If{there is a dipole or $\rho_2$-move or $\rho_3$-move in $J''$}
-                    \State $J \gets J''$ and exit
-                \Else
-                    \State $U \leftarrow U \cup \{J''\}$
-                    \State $C \leftarrow C \cup \{J''\}$
-                \EndIf
-            \EndIf
-         \EndFor
-      \EndWhile
-      \State $J \gets \min\{J'\in C\}$
-   \EndProcedure
-\end{algorithmic}
-\end{footnotesize}
-}}
-
-\newcommand{\SimplifyGem}{
-\parbox{7.5cm}{
-\begin{footnotesize}
-\setstretch{1.25}
-\begin{algorithmic}[1]
-   \Procedure{SimplifyGem}{$J$} \Comment{$J$ becomes its simplified version}
-   \While{true}
-      \If{there is a dipole in $J$}
-         \State apply dipole cancelation in $J$
-      \ElsIf{there is a $\rho_3$-pair or $\rho_2$-pair in $J$}
-         \State apply $\rho_3$-pair or apply $\rho_2$-pair in $J$
-      \Else  \State break
-      \EndIf
-   \EndWhile
-   \EndProcedure
-\end{algorithmic}
-\end{footnotesize}
-}}
+% \newcommand{\GemOfGBlink}{
+% \parbox{7.5cm}{
+% \begin{footnotesize}
+% \setstretch{1.25}
+% \begin{algorithmic}[1]
+%    \Function{GemOfGBlink}{$G$}
+%    \State $J \leftarrow \textsc{GBlink2Gem}(G)$
+%    \While{true}
+%       \State $\textsc{SimplifyGem}(J)$
+%       \State $\textsc{SearchInTSClass}(J,12\, {\rm seconds})$
+%       \If{$J$ has no dipole, no $\rho_2$-pair and no $\rho_3$-pair}
+%          \State break
+%       \EndIf
+%    \EndWhile
+%    \State {\bf return} \,\, $J$
+%    \EndFunction
+% \end{algorithmic}
+% \end{footnotesize}
+% }}
+% 
+% \newcommand{\SearchInTSClass}{
+% \parbox{7.5cm}{
+% \begin{footnotesize}
+% \setstretch{1.25}
+% \begin{algorithmic}[1]
+%    \Procedure{SearchInTSClass}{$J, maxtime$}
+%       \State $C \gets \{ J \}$ \,\, $U \gets \{ J \}$ \Comment{$C$ is the current TS-class of $J$ and $U$ are the unprocessed gems}
+%       \While{$U$ is not empty and elapsed time < $maxtime$}
+%          \State $J' \leftarrow$ a gem in $U$
+%          \State $U \leftarrow U \backslash \{J'\}$
+%          \For{all possible TS-moves $m$ in $J'$ }
+%             \State $J'' \leftarrow J'$ with TS-move $m$ applied
+%             \If{$J'' \notin C$}
+%                 \If{there is a dipole or $\rho_2$-move or $\rho_3$-move in $J''$}
+%                     \State $J \gets J''$ and exit
+%                 \Else
+%                     \State $U \leftarrow U \cup \{J''\}$
+%                     \State $C \leftarrow C \cup \{J''\}$
+%                 \EndIf
+%             \EndIf
+%          \EndFor
+%       \EndWhile
+%       \State $J \gets \min\{J'\in C\}$
+%    \EndProcedure
+% \end{algorithmic}
+% \end{footnotesize}
+% }}
+% 
+% \newcommand{\SimplifyGem}{
+% \parbox{7.5cm}{
+% \begin{footnotesize}
+% \setstretch{1.25}
+% \begin{algorithmic}[1]
+%    \Procedure{SimplifyGem}{$J$} \Comment{$J$ becomes its simplified version}
+%    \While{true}
+%       \If{there is a dipole in $J$}
+%          \State apply dipole cancelation in $J$
+%       \ElsIf{there is a $\rho_3$-pair or $\rho_2$-pair in $J$}
+%          \State apply $\rho_3$-pair or apply $\rho_2$-pair in $J$
+%       \Else  \State break
+%       \EndIf
+%    \EndWhile
+%    \EndProcedure
+% \end{algorithmic}
+% \end{footnotesize}
+% }}
 
 The 3-gem that we associated to each g-blink in $U$ was given by
 the function \textsc{GemOfGBlink} shown in Algorithm \ref{alg:algorithmFor3Gems}.
@@ -488,19 +492,21 @@ this case we used 3-gems modulo orientation. In other words, the 3-gem we
 associated to each g-blink could be exactly the same space, or the same
 space with orientation changed. As it might be clear now, this is enough
 here: spaces modulo orientation.
-\begin{algorithm}
-\caption{Algorithms for 3-Gems}
-\label{alg:algorithmFor3Gems}
-\smallskip
-\begin{tabular}{c|c}
-\begin{tabular}{c}
-\GemOfGBlink\\[2.9cm] \hline
-\\[-0.05cm]
-\SimplifyGem
-\end{tabular} &
-\SearchInTSClass
-\end{tabular}
-\end{algorithm}
+% \begin{algorithm}
+% \caption{Algorithms for 3-Gems}
+% \label{alg:algorithmFor3Gems}
+% \smallskip
+% \begin{tabular}{c|c}
+% \begin{tabular}{c}
+% \GemOfGBlink\\[2.9cm] \hline
+% \\[-0.05cm]
+% \SimplifyGem
+% \end{tabular} &
+% \SearchInTSClass
+% \end{tabular}
+% \end{algorithm}
+
+\center{ACIMA TEM UM ALGORITMO}\\
 
 The remaining challenge at this point was to find whether these 999
 3-gems, seen as nodes of a graph, could be connected in 501
@@ -574,15 +580,15 @@ two cases and we just could not find them or are these the only
 weak points of the HGnQI invariant on the set $U$? We leave
 this question open and register it as the following conjectures.
 
-\begin{Conj} \label{conj:conjecture1}
+\begin{conjecture} \label{conj:conjecture1}
 The spaces induced by all 5 blinks or BFLs on Figure~\ref{fig:doubts}A
 are the same.
-\end{Conj}
+\end{conjecture}
 
-\begin{Conj} \label{conj:conjecture2}
+\begin{conjecture} \label{conj:conjecture2}
 The spaces induced by all 3 blinks or BFLs on Figure~\ref{fig:doubts}B
 are the same.
-\end{Conj}
+\end{conjecture}
 
 The only reason we conjecture these stems from the fact that
 HGnQI have not failed in all other 499 cases. But,
@@ -602,9 +608,9 @@ except for the two cases explained, can be exhibited by this program.
 In the 3-gem presentation it is sometimes possible to identify that
 its induced space is composite. For example the space induced by g-blink $U[31]$
 is also induced by a 3-gem ($r_4^{18}$ in the 3-gems catalogue of \cite{Lins1995}) that
-contains a {\it disconnecting quartet}, \ie four edges with distinct colors
+contains a {\em disconnecting quartet}, i.e. four edges with distinct colors
 that disconnected the 3-gem. The existence of this structure in a 3-gem
-or the existence of handles, \ie connected sums with $\IS^2 \times \IS^1$,
+or the existence of handles, i.e. connected sums with $\mathbb{S}^2 \times \mathbb{S}^1$,
 is a proof that the induced space is composite. In the 501 HGnQI classes, using
 this kind of 3-gem information, we could prove that 14 of them were composite. The
 rules that we used in the construction of $U$ were not able to identify that
@@ -618,7 +624,7 @@ the 487 classes that were not proven composite gained names 1.1, 2.1, 3.1  $\ldo
 and 9.1 $\ldots$ 9.296; the 14 classes that were proven composite gained names 6.1c \ldots 6.3c,
 8.1c \ldots 8.5c and 9.1c $\ldots$ 9.6c. The number before the point stands for
 the number of g-edges of the minimal g-blink in $U$ found for that space.
-Let $U[n.i]$ denote the smallest g-blink (\ie smallest code) in class $n.i$, \ie
+Let $U[n.i]$ denote the smallest g-blink (i.e. smallest code) in class $n.i$, i.e.
 $U[n.i] = \min\{G \in n.i\}$. For instance $U[5.1]$ is $U[11]$ and $U[6.1{\rm c}]$ is $U[31]$.
 The number after the point stands for the following: $n.1$ is the class
 where g-blink $U[n.1]$ has $n$ g-edges and is the smallest g-blink among all
@@ -640,18 +646,18 @@ classes that we do not know whether they induce a single space or two spaces are
 
 The 14 composite spaces in $U$ are in Appendix~\ref{chap:compositeCatalogue}.
 The quantum invariant at level $r$ of the connected sum of spaces $A_1 \ldots A_n$ is the product
-of their quantum invariants at the same level divided by the $r$-th quantum invariant of $\IS^3$ to
+of their quantum invariants at the same level divided by the $r$-th quantum invariant of $\mathbb{S}^3$ to
 the power $n-1$. Using this we could align the orientations of the prime spaces that
 produced these composite spaces. Figure~\ref{fig:compositeSpaces} shows explicitly these
 14 spaces as a prime space composition with the correct orientation.
 
-The space $\IS^2 \times \IS^1$ has a blink presentation that is just a vertex
-and no edges, \ie a BFL that has no crossings and is just a closed loop. This
+The space $\mathbb{S}^2 \times \mathbb{S}^1$ has a blink presentation that is just a vertex
+and no edges, i.e. a BFL that has no crossings and is just a closed loop. This
 space is a special one as it is the only prime space that has a blink presentation
 without edges. By the rules we used on the construction of set $U$ this space
 needed not to appear once: (1) we did not include blinks without edges and
 (2) only one minimal presentation of a space was asserted to appear. This
-space should be included artificially after. In spite of that, $\IS^2 \times \IS^1$
+space should be included artificially after. In spite of that, $\mathbb{S}^2 \times \mathbb{S}^1$
 appeared as class 6.5. Figure~\ref{fig:gblinksForS1xS2inU} shows a blink
 and a BFL for the 36 g-blinks in class 6.5. In a strict sense, this class
 could be named 0.1 and spaces 6.6 to 6.19 would be decreased by one to 6.5
@@ -663,32 +669,33 @@ to 6.18, but we do not do this.
       \includegraphics[width=14cm]{A.figs/gblinksfors1xs2inu.eps}
    \end{center}
    \vspace{-0.7cm}
-   \caption{ Blink and BFL presentations for g-blinks in 6.5: space $\IS^2 \times \IS^1$}
+   \caption{ Blink and BFL presentations for g-blinks in 6.5: space $\mathbb{S}^2 \times \mathbb{S}^1$}
    \label{fig:gblinksForS1xS2inU}
 \end{figure}
 
 
-\begin{Theo}
+\begin{theorem}
 \label{theo:primeSpacesUpTo9Edges}
 Any prime space that has a blink presentation with $\leq$ 9 edges induces the
 same space (modulo orientation) as one and only one of the 487 blinks in
 Figure~\ref{fig:primeSpace487Representatives} or the 487 BFLs in
 Figure~\ref{fig:primeSpace487RepresentativeLinks} or the 487 spaces shown
 in Appendix~\ref{chap:primeCatalogue}.
-\end{Theo}
+\end{theorem}
 
 \enlargethispage{2cm}
 
 \begin{proof}
 The construction of set $U$ asserts that it contains at least one minimal
-g-blink for each prime space except for space $\IS^2 \times \IS^1$,
+g-blink for each prime space except for space $\mathbb{S}^2 \times \mathbb{S}^1$,
 which is a special case where its minimal blink presentation
-has no edges: only a single vertex. In spite of that $\IS^2 \times \IS^1$
+has no edges: only a single vertex. In spite of that $\mathbb{S}^2 \times \mathbb{S}^1$
 appears in $U$ as class 6.5 so any prime space is included. The proof
 that there are only 487 (with 2 doubts) is in the program \textsc{Blink}.
 \end{proof}
 
-
+A closed compact oriented 3-manifold is {\em $n$-small} if it is induced by a blink with
+at most $n$ edges.
 
 \newpage
 
@@ -696,11 +703,10 @@ that there are only 487 (with 2 doubts) is in the program \textsc{Blink}.
    \begin{center}
       \leavevmode
       %\includegraphics[width=14.5cm]{A.figs/primeSpace487Representants.eps}
-      \includegraphics[width=15cm]{A.figs/primespace487representants.eps}
+      \includegraphics[width=16cm]{E.figsbw2/primespace487representants_bw.pdf}
    \end{center}
    \vspace{-0.7cm}
-   \caption{ List of 487 blinks that induce once any prime space (modulo orientation)
-   that has a blink presentation with $\leq$ 9 edges}
+   \caption{A complete census of 9-small closed oriented 3-manifolds, still with two uncertainties}
    \label{fig:primeSpace487Representatives}
 \end{figure}
 
@@ -709,17 +715,16 @@ that there are only 487 (with 2 doubts) is in the program \textsc{Blink}.
 \begin{figure}[h!tp]
    \begin{center}
       \leavevmode
-      \includegraphics[width=15cm]{A.figs/primespace487representantlinks.eps}
+      \includegraphics[width=16cm]{E.figsbw2/primespace487representantlinks_bw.pdf}
    \end{center}
    \vspace{-0.7cm}
-   \caption{ List of 487 BFLs that induce once any prime space (modulo orientation)
-   that has a BFL presentation with $\leq$ 9 crossings}
+   \caption{Corresponding links for the census of 9-small 3-manifolds, still with two doubts}
    \label{fig:primeSpace487RepresentativeLinks}
 \end{figure}
 
 \newpage
 
-\section{Spaces induced by simple 3-connected monochromatic blinks}
+\subsection{Spaces induced by simple 3-connected monochromatic blinks}
 
 Blinks bring to the stage a very interesting connection: spaces and
 plane graphs. Can concepts of graph theory when interpreted in space
@@ -734,7 +739,7 @@ In this crude form, this concept of block or more general
 $k$-connected blink does not mean something useful in
 the language of spaces because of the following
 observation: using the $B_2$ move of blink calculus
-(\ie $RM_2$ in BFL calculus) explained
+(i.e. $RM_2$ in BFL calculus) explained
 on Section~\ref{sec:blinkCalculus} one
 may obtain blinks with higher connectivity inducing
 the same space. But this comes
@@ -765,11 +770,11 @@ Let $B$ be a green (all edges green) blink, $B'$ be a green blink
 whose map (plane graph) is the dual map of $B$, $B''$ be $B$
 reflected on the plane and $B'''$ be $B'$ reflected on the plane.
 As we saw in Chapter~\ref{chap:blinks} all these blinks induce the
-same space modulo orientation. Let's denote as {\it trivial}
+same space modulo orientation. Let's denote as {\em trivial}
 a pair of blinks $A$ and $B$ if they induce the same space modulo
 orientation and $A \in \{B,B',B'',B'''\}$. A pair of blinks inducing
 the same space modulo orientation that is not trivial is called
-{\it non-trivial}. Are all pair of green blocks (2-connected blinks)
+{\em non-trivial}. Are all pair of green blocks (2-connected blinks)
 that induce the same space modulo orientation trivial?
 No. Space $7.29$ in Appendix~\ref{chap:primeCatalogue}
 has a counterexample. Figure~\ref{fig:nonTrivialGreenBlocks} shows

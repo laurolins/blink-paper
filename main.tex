@@ -1,70 +1,48 @@
-%% Template para dissertação/tese na classe UFPEthesis
-%% versão 0.9.2
-%% (c) 2005 Paulo G. S. Fonseca
-%% www.cin.ufpe.br/~paguso/ufpethesis
 
-%% Carrega a classe ufpethesis
-%% Opções: * Idiomas
-%%           pt   - português (padrão)
-%%           en   - inglês
-%%         * Tipo do Texto
-%%           bsc  - para monografias de graduação
-%%           msc  - para dissertações de mestrado (padrão)
-%%           qual - exame de qualificação doutorado
-%%           prop - proposta de tese doutorado
-%%           phd  - para teses de doutorado
-%%         * Mídia
-%%           scr  - para versão eletrônica (PDF) / consulte o guia do usuario
-%%         * Estilo
-%%           classic - estilo original à la TAOCP (deprecated)
-%%           std     - novo estilo à la CUP (padrão)
-%%         * Paginação
-%%           oneside - para impressão em face única
-%%           twoside - para impressão em frente e verso (padrão)
-\documentclass[en,phd]{ldlthesis}
+\documentclass[a4paper,10pt,twoside]{article}
 
-%% Preâmbulo:
-%% coloque aqui o seu preâmbulo LaTeX, i.e., declaração de pacotes,
-%% (re)definições de macros, medidas, etc.
-\usepackage[dvips]{color}
-\usepackage{algorithm}
-\usepackage{algpseudocode} %end/noend
-\usepackage{comment} %end/noend
-\usepackage{url} %end/noend
-\usepackage{setspace}
+%===========PACOTES
+\usepackage[body={170mm,235mm}]{geometry}
+%\usepackage[portuguese]{babel}
+\usepackage{a1}
+\usepackage{algorithmicx}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc} %permite o uso de acentos
+%\usepackage[dvips]{color}
+\usepackage{amsfonts,amssymb}
+%\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{graphicx}	
 
-%% Identificação:
+% makeidx
+\usepackage{makeidx}
+% make index
+\makeindex
+%\usepackage[pdftex]{graphicx}
 
-% Universidade
-% e.g. \university{Universidade de Campinas}
-% Na UFPE, comente a linha a seguir
-\university{Universidade Federal de Pernambuco}
 
-% Endereço (cidade)
-% e.g. \address{Campinas}
-% Na UFPE, comente a linha a seguir
-%\address{<CIDADE DA IES>}
+\def\mapright#1#2#3{\smash{\mathop{\hbox to
+#3{\rightarrowfill}}\limits^{#1}_{#2}}}
 
-% Instituto ou Centro Acadêmico
-% e.g. \institute{Centro de Ciências Exatas e da Natureza}
-% Comente se não se aplicar
-\institute{Centro de Ciências Exatas e da Natureza}
+\def\mapleft#1#2#3{\smash{\mathop{\hbox to
+#3{\leftarrowfill}}\limits^{#1}_{#2}}}
 
-% Departamento acadêmico
-% e.g. \department{Departamento de Informática}
-% Comente se não se aplicar
-%\department{<NOME DO DEPARTAMENTO>}
+\def\mapright#1#2{\smash{\mathop{\hbox to 0.90cm{\rightarrowfill}}\limits^{#1}_{#2}}}
+\def\mapleft#1#2{\smash{\mathop{\hbox to 0.90cm{\leftarrowfill}}\limits^{#1}_{#2}}}
 
-% Programa de pós-graduação
-% e.g. \program{Pós-graduação em Ciência da Computação}
-\program{Pós-graduação em Matemática Computacional}
+\def\mapleftright#1#2{\smash{\mathop{\hbox to 0.80cm{\leftarrowfill \rightarrowfill}}\limits^{#1}_{#2}}}
+\def\ext{\times \! \vrule depth0pt height5pt width0.35pt}
 
-% Área de titulação
-% e.g. \majorfield{Ciência da Computação}
-\majorfield{Topologia Computacional}
+\def\H{\mathcal H}
+\def\D{\mathcal D}
+\def\B{\mathcal B}
+\def\C{\mathbb C}
+\def\R{\mathbb R}
+\def\S{\mathbb S}
+\def\U{\mathcal U}
+\def\Z{\mathbb Z}
 
-% Título da dissertação/tese
-% e.g. \title{Sobre a conjectura $P=NP$}
+
 %\title{\textsc{Blink}: a language to view, recognize, \\ classify and manipulate 3D-spaces}
 \title{\textsc{All Shapes of Spaces}: a census of small 3-manifolds}
 
@@ -74,27 +52,8 @@
 
 % Autor
 % e.g. \author{José da Silva}
-\author{Lauro Didier Lins}
+\author{Lauro Didier Lins and Sóstenes L. Lins}
 
-% Orientador(a)
-% Opção: [f] - para orientador do sexo feminino
-% e.g. \adviser[f]{Profa. Dra. Maria Santos}
-\adviser{Sóstenes Luiz Soares Lins}
-
-% Orientador(a)
-% Opção: [f] - para orientador do sexo feminino
-% e.g. \coadviser{Prof. Dr. Pedro Pedreira}
-% Comente se não se aplicar
-%\coadviser{NOME DO(DA) CO-ORIENTADOR(A)}
-
-
- \include{macros}
-
-% stretch
-\setstretch{1.5}
-
-% parskip
-\setlength{\parskip}{3pt}
 
 %% Inicio do documento
 \begin{document}
@@ -102,8 +61,6 @@
 %%
 %% Parte pré-textual
 %%
-\frontmatter
-
 % Folha de rosto
 % Comente para ocultar
 %\frontpage
@@ -173,7 +130,7 @@ April, 2013
 
 % Resumo em Inglês
 % Se preferir, crie um arquivo à parte e o inclua via \include{}
-\include{abstract}
+
 
 % Palavras-chave do resumo em Inglês
 %\begin{keywords}
@@ -182,11 +139,11 @@ April, 2013
 
 % Sumário
 % Comente para ocultar
-\tableofcontents
+%\tableofcontents
 
 % Lista de figuras
 % Comente para ocultar
-\listoffigures
+%\listoffigures
 
 % Lista de tabelas
 % Comente para ocultar
@@ -195,7 +152,28 @@ April, 2013
 %%
 %% Parte textual
 %%
-\mainmatter
+
+
+\begin{abstract}
+A {\em blink} is a plane graph with its edges being red or green. A
+{\em 3D-space} or, simply, a {\em space} is a connected, closed and oriented
+3-manifold. In this work we explore in details, for the first time,
+the fact that every blink induces a space and any space is induced by
+some blink (actually infinitely many blinks). What is the space of a green triangle?
+And of a red square? Are they the same? These questions were condensed into
+a single one that guided a great part of the developed work: what are all
+spaces induced by small blinks (few edges)? In this search we used a known
+set of tools: the {\em blackboard framed links} (BFL),
+the {\em homology groups}, the {\em quantum invariant} of Witten-Reshetikhin-Turaev,
+the {\em 3-gems} and its simplification theory. Combining these tools with a
+new theory of decomposition/composition of blinks we could identify all
+spaces induced by blinks with up to 9 edges (or BFLs with up to 9 crossings).
+Besides that, our effort resulted in an interactive computer program named
+\textsc{Blink}. We hope that this program becomes useful in the study
+of spaces, in particular, in the discovery of new invariants that
+complement the quantum invariant and homology group solving the two
+uncertainties that we left open in this work.
+\end{abstract}
 
 % É aconselhável criar cada capítulo em um arquivo à parte, digamos
 % "capitulo1.tex", "capitulo2.tex", ... "capituloN.tex" e depois
@@ -207,34 +185,42 @@ April, 2013
 \include{chapter5}
 \include{chapter6}
 
+
+%\include{chapter3}
+% \include{chapter4}
+% \include{chapter5}
+% \include{chapter6}
+
 %%
 %% Parte pós-textual
 %%
 
-\backmatter
-
 % Apêndices
 % Comente se não houver apêndices
 \appendix
+\include{appendix1}
+\include{appendix2}
+\include{appendix3}
 
 % É aconselhável criar cada apêndice em um arquivo à parte, digamos
 % "apendice1.tex", "apendice.tex", ... "apendiceM.tex" e depois
 % incluí-los com:
-\include{appendix1}
-\include{appendix2}
-\include{appendix3}
+% \include{appendix1}
+% \include{appendix2}
+% \include{appendix3}
 % ...
 % \include{apendiceM}
+
 
 % Bibliografia
 % É aconselhável utilizar o BibTeX a partir de um arquivo, digamos "biblio.bib".
 % Para ajuda na criação do arquivo .bib e utilização do BibTeX, recorra ao
 % BibTeXpress em www.cin.ufpe.br/~paguso/bibtexpress
 \setlength{\topmargin}{0cm}
-\nocite{*}
 %\bibliographystyle{alpha}
+%\nocite{*}
 \bibliographystyle{plain}
-\bibliography{references}
+\bibliography{bibtexIndex.bib}
 
 % Cólofon
 % Inclui uma pequena nota com referência à UFPEThesis

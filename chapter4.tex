@@ -1,7 +1,7 @@
-\chapter{3-Gems}
+\section{3-Gems}
 \label{chap:gems}
 
-\section{Definition}
+\subsection{Definition}
 
 An {\em $(n+1)$-graph} is a regular graph where all its vertices
 have degree $n+1$ and the edges incident to each vertex have
@@ -16,7 +16,7 @@ $K$ is a set, we denote by $\overline{K}$ its complement
 bigon} and a 3-residue is also called a {\em triball}. A {\em 3-gem}
 (acronym for 3-dimensional graph encoded manifold) is a
 $(3+1)$-graph where each of its 3-residues induces the surface of a
-sphere, $\IS^2$. Each bipartite gem $G$ corresponds to a unique
+sphere, $\mathbb{S}^2$. Each bipartite gem $G$ corresponds to a unique
 space $|G|$. The easiest way to define $|G|$ is to start with
 $v_G$ tetrahedra each with its 4 vertices painted each with one color of
 $\{0,1,2,3\}=\{h,i,j,k\}$ and glue a pair of tetrahedra $t_u$ and
@@ -31,16 +31,16 @@ where $b_G$ is the number of 2-residues of $G$,
 $v_G$ is the number of vertices of $G$ and
 $t_G$ is the number of 3-residues of $G$.
 The agemality is non-negative and it is $0$ if and only if $G$ is a gem. Indeed we
-have (\cite{Lins1995}):
+have (\cite{lins1995gca}):
 
-\begin{Prop}
+\begin{proposition}
 Let $G$ be a $(3+1)$-graph with $b_G$ 2-residues, $t_G$ 3-residues
 and $v_G$ vertices, then $G$ is a 3-gem if and only if its agemality
 is zero, that is, $$v_G + t_G = b_G.$$
-\end{Prop}
+\end{proposition}
 
 
-\section{Moves on gems}
+\subsection{Moves on gems}
 Let $G$ be a 3-gem. An $i$-colored edge $\alpha$ of $G$ is a {\em
 1-dipole} if the vertices incident to $\alpha$ are in different
 $\overline{\{ i \}}$-residues. A pair of edges of $G$ one with color
@@ -59,7 +59,7 @@ three common bigons then the pair is said to be a {\em
 $\rho_3$-pair}. If a $\rho$-pair is found in a gem we can get a
 smaller gem inducing the same space.
 
-\section{Simplifying dynamics}
+\subsection{Simplifying dynamics}
 In this section we briefly review the simplifying dynamics on gems.
 This technique is developed in~\cite{Lins1995} and it uses the so
 called $TS$-moves and  $U$-move which maintain the induced
@@ -112,7 +112,7 @@ have been so far sufficient to classify gems up to 30 vertices.
 
 \newpage
 
-\section{From g-blink to 3-gem}
+\subsection{From g-blink to 3-gem}
 \label{sec:fromGBlinkTo3Gem}
 
 Assume that $G$ is a g-blink with no g-zigzags with g-edges
@@ -135,14 +135,14 @@ begin by proving a result which simplifies considerably the passage
    \label{fig:The12x8Move}
 \end{figure}
 
-\begin{Theo} \label{theo:blinkToGem}
+\begin{theorem} \label{theo:blinkToGem}
 Given a g-blink $B$ with no alternating g-zigzags it is possible to
 obtain a gem $J^\downarrow$ where each edge of the blink (which
 corresponds to a crossing of the associated BFL) becomes the
 sub-configuration of $8$ vertices shown in Figure~\ref{fig:The12x8Move}I
 so that $B$ and $G(B)$ induce the same
 space.
-\end{Theo}
+\end{theorem}
 \begin{proof}
 It is proved in \cite{KauffmanAndLins1994} that replacing each
 crossing of the BFL associated to the blink by the configuration of
@@ -210,12 +210,12 @@ $a_i$ the $i$-colored edge incident to $a$. Let $a_i^\star$ denote
 the $2$-simplex in the dual pseudo-complex $J^\star$ corresponding
 to the edge $a_i$ of the gem $J$.
 
-\begin{Lem} Let $q,r,s,t$ be the ends of the two
+\begin{lemma} Let $q,r,s,t$ be the ends of the two
 red-green digons induced in $J$ by the directed edge $e$ of $B$, as
 shown in Figure~\ref{fig:cylinderInEdge}. Then the sub-complex
 $\C_e=q_2^\star + q_3^\star + r_1^\star + r_0^\star$ is a
 non-singular cylinder in $J^\star$.
-\end{Lem}
+\end{lemma}
 \begin{proof}
 Two $2$-simplexes of $J^\star$ in colors $i$ and $j$ have a common
 $1$-simplex if and only if the dual edges are in the same
@@ -300,7 +300,6 @@ edges~on~$J^\downarrow:$
 \item For every angle-edge $\hat{e} = (u,v)$ in $G$ edges
 $(u_i,v_i)$ and $(u_o,v_o)$, both with color 1, are added to
 $J^\downarrow$.
-\newpage
 
 \item At this point, some vertices in $J^\downarrow$
 do not have a color 0 incident edge. Let $u$ be a vertex in
@@ -336,8 +335,7 @@ complete example of a g-blink and the 3-gem defined by
    \label{fig:gBlinkAndGem}
 \end{figure}
 
-\newpage
-\section{A proof of the partial reflection theorem}
+\subsection{A proof of the partial reflection theorem}
 \label{sec:proofOfThePartialReflectionTheorem}
 We first show that a breakpair $\{e,f\}$ in a g-blink $C$
 corresponds in $J^\star=J^\star(C)$ to a separating non-singular
@@ -356,10 +354,10 @@ $2$-torus $T^2_{ef}$.
 \end{figure}
 
 
-\begin{Lem} \label{lem:torus}
+\begin{lemma} \label{lem:torus}
 The subcomplex $T^2_{ef} = \C_e + \C_f$ is a non-singular separating
 torus in the dual pseudo-complex $J^\star$.
-\end{Lem}
+\end{lemma}
 
 \begin{proof} We have seen already that $\C_e$ and $\C_f$ are
 cylinders in $J^\star$. It remains to show that these cylinders have
@@ -380,40 +378,45 @@ with boundary $\C_\alpha + \C_\beta = T_{\alpha\beta}^2 \equiv T^2
 \times \{0\}$ and  $|K_B|$ with boundary $\C_\gamma + \C_\delta =
 T_{\gamma\delta}^2 \equiv T^2 \times \{\epsilon\}$ as shown in
 Figure~\ref{fig:breakpairAndTorus}. It follows that
-\begin{equation}\label{eq:tripartition1} |K| = |K_A| \cup \left(T^2
-\times [0,\epsilon]\right)\ \cup\ |K_B|,\end{equation} with
-\begin{equation}\label{eq:tripartition2} |K_A| \cap \left(T^2 \times
-[0,\epsilon]\right) = T_{\alpha\beta}^2 , \hspace {8mm} \left(T^2
-\times [0,\epsilon] \cap |K_B| \right) = T^2_{\gamma\delta}, \hspace
-{8mm} |K_B| \cap |K_A| = \emptyset.\end{equation}
+
+\begin{center}
+ BEGIN EQUATION
+\end{center}
+
+% \begin{equation}\label{eq:tripartition1} |K| = |K_A| \cup \left(T^2
+% \times [0,\epsilon]\right)\ \cup\ |K_B|,\end{equation} with
+% \begin{equation}\label{eq:tripartition2} |K_A| \cap \left(T^2 \times
+% [0,\epsilon]\right) = T_{\alpha\beta}^2 , \hspace {8mm} \left(T^2
+% \times [0,\epsilon] \cap |K_B| \right) = T^2_{\gamma\delta}, \hspace
+% {8mm} |K_B| \cap |K_A| = \emptyset.\end{equation}
 
 For the proof of the Partial Reflection Theorem we present the
-$2$-torus as the quotient space of $\IR^2$ by the lattice of integer
-points: $T^2={\frac{\IR\times \IR}{\IZ\times \IZ}}$. Seeing $T^2$ in
+$2$-torus as the quotient space of $\mathbb{R}^2$ by the lattice of integer
+points: $T^2={\frac{\mathbb{R}\times \mathbb{R}}{\mathbb{Z}\times \mathbb{Z}}}$. Seeing $T^2$ in
 this way, the $\pi$-rotational symmetry that we will need becomes
-simply $(x,y) \mapsto (-x,-y)$. Let $F = \IR\times \IR \times
+simply $(x,y) \mapsto (-x,-y)$. Let $F = \mathbb{R}\times \mathbb{R} \times
 [0,\pi]$. Consider the auto-homeomorphism $\mu$ of $F$ given by
 $$\mu(x,y,\theta)=\left(x\, \cos\, \theta
 +y\, \sin\, \theta, -x\, \sin\, \theta+y\, \cos\, \theta,\,
 \theta\right).$$
 
 Define $\equiv'$ as the equivalence relation on $F$: $(x,y,\theta)
-\equiv' (x',y',\theta')$ if $\theta'=\theta$, $x-x' \in \IZ$ and
-$y-y' \in \IZ$. The quotient space $F / \equiv'$ is denoted by $F'$.
+\equiv' (x',y',\theta')$ if $\theta'=\theta$, $x-x' \in \mathbb{Z}$ and
+$y-y' \in \mathbb{Z}$. The quotient space $F / \equiv'$ is denoted by $F'$.
 The image under $\mu$ of a the vertical segment linking $(x,y,0)$ to
 $(x,y,\pi)$ is a helicoidal curve that starts at $(x,y,0)$, and
 finishes at $(-x,-y,\epsilon)$. Note that any two vertical segments
 in $F$ whose distance is an integer are identified. Clearly $F'
-\approx \IS^1 \times \IS^1 \times [0,\epsilon]$.
+\approx \mathbb{S}^1 \times \mathbb{S}^1 \times [0,\epsilon]$.
 
 Define $\equiv_\mu$ as another equivalence relation on $F$ given by
 $$(x,y,\theta) \equiv_\mu (x',y',\theta') {\hspace{5mm}\rm
 if \hspace{5mm} } \mu^{-1}(x,y,\theta) \equiv'
 \mu^{-1}(x',y',\theta'), \rm {\ that\ is,\ if \ } \theta=\theta'
 \rm{\ and} $$  $$ x\,\cos\, \theta -y\, \sin\, \theta - x'\, \cos\,
-\theta'+ y'\, \sin\, \theta' \in \IZ$$
+\theta'+ y'\, \sin\, \theta' \in \mathbb{Z}$$
 $$x\, \sin\, \theta + y\,
-\cos\, \theta - x'\, \sin\, \theta' - y'\, \cos\, \theta' \in \IZ.$$
+\cos\, \theta - x'\, \sin\, \theta' - y'\, \cos\, \theta' \in \mathbb{Z}.$$
 The space $F/\equiv_\mu$ is denoted by $\widetilde{F}$. Observe the
 simple fact that $\mu$ induces a homeomorphism sending $F'$ onto
 $\widetilde{F}$, also named $\mu$ by abuse of language. As a
@@ -448,7 +451,7 @@ We are now ready to prove Theorem~\ref{theo:partialReflection}
 
 \noindent {\bf Proof of Theorem~\ref{theo:partialReflection}:\ } Let
 $A$ and $B$ be arbitrary disjoint g-blinks, $(a,b)$ a basepair on
-them. Then $A[a] + B[b] \Sequiv A[a] + \textsc{Reflection}(B)[b].$
+them. Then $A[a] + B[b] \equiv_S A[a] + \textsc{Reflection}(B)[b].$
 \begin{proof}
 Let $J$ be the canonical gem of the g-blink $A[a] + B[b]$ and $J\,
 '$ be the canonical gem of g-blink $A[a] +
@@ -468,11 +471,14 @@ $$ |K| = |K_A| \cup \left(T^2 \times
 [0,\epsilon]\right)\ \cup\ |K_B|, \hspace{3mm} |\widetilde{K}| =
 |K_A| \cup \left(\widetilde{T_2} \times [0,\epsilon]\right)\ \cup\
 |-K_B|, \hspace{3mm} |K_A| \cap |K_B| = \emptyset.$$ with
-\begin{equation}
-\label{eq:tripartition4} |K_A| \cap \left( T^2 \times
-[0,\epsilon]\right) = T_{\alpha\beta}^2, \hspace {8mm} \left({T^2}
-\times [0,\epsilon]\right) \cap |K_B| = T_{\gamma\delta}^2,
-\end{equation}
+\begin{center}
+ BEGIN EQUATION
+\end{center}
+% \begin{equation}
+% \label{eq:tripartition4} |K_A| \cap \left( T^2 \times
+% [0,\epsilon]\right) = T_{\alpha\beta}^2, \hspace {8mm} \left({T^2}
+% \times [0,\epsilon]\right) \cap |K_B| = T_{\gamma\delta}^2,
+% \end{equation}
 $$ |K_A| \cap \left( \widetilde{T^2} \times
 [0,\epsilon]\right) = T_{\alpha\beta}^2, \hspace {8mm} \left(
 \widetilde{T^2} \times [0,\epsilon]\right) \cap |-K_B| =
@@ -486,13 +492,13 @@ the desired homeomorphism taking $|K|$ onto $|\widetilde{K}|$.
 
 We finish this chapter by proving the following Theorem about BFLs
 with a segment between crossings removed:
-\begin{Theo} \label{BFLwithSegmentRemoved}
+\begin{theorem} \label{BFLwithSegmentRemoved}
 Let $B^\circ$ be a BFL $B$ with a segment between crossings removed.
 There exists a well defined 3-manifold with toroidal boundary
 $S^\circ$ which can be associated to $B^\circ$. Moreover, there
 exists a canonical way to close $S^\circ$ by attaching a solid torus
 to its boundary to get a space $S$ such that $|B|=S$.
-\end{Theo}
+\end{theorem}
 \begin{proof} The proof should be followed in Figure~\ref
 {fig:spaceToroidalBoundary}. Gem $J$ is the canonical gem of the BFL
 $B$. Gems $J\, '$ and $J\, '\, '$ are obtained from $J$ by 2-dipole
