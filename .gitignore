@@ -4,5 +4,11 @@
 *.lof
 *.toc
 *.dvi
+*.idx
+*.ilg
+*.ind
+*backup
+D.*
+E.fi*/*gz
 *.???~
 *~
